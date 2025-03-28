@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy </title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+            
+        }
+        .poster {
+            text-align: center;
+            background: linear-gradient(145deg, #ffffff, #ffe6f0);
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            padding: 20px;
+            width: 90%;
+            max-width: 400px;
+            position: relative;
+            z-index: 10;
+        }
+        .poster h1 {
+            font-size: 2.5rem;
+            color: #ec4c5c;
+            margin: 0 0 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .poster p {
+            font-size: 1.1rem;
+            color: #4b0082;
+            margin: 10px 0 20px;
+        }
+        .poster .heart {
+            font-size: 6rem;
+            color: #ff6f61;
+            animation: heartbeat 2.5s infinite;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.3);
+            }
+        }
+        .poster button {
+            background-color: #f74d5e;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .poster button:hover {
+            background-color: #cf1758;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+        .floating-heart {
+            position: absolute;
+            font-size: 2rem;
+            color: #ff6f61;
+            animation: float 5s infinite ease-in-out;
+            opacity: 0.8;
+        }
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) scale(0.8);
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-40vh) scale(2.2);
+                opacity: 0;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .poster h1 {
+                font-size: 2rem;
+            }
+            .poster p {
+                font-size: 1rem;
+            }
+            .poster .heart {
+                font-size: 5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .poster {
+                padding: 15px;
+            }
+            .poster button {
+                font-size: 0.9rem;
+                padding: 8px 15px;
+            }
+        }
+    </style>
+    <script>
+        function showMessage() {
+            alert('Sending love and happiness to you! ❤');
+        }
+
+        function createFloatingHearts() {
+            const body = document.body;
+            for (let i = 0; i < 10; i++) { // Adjust number of hearts for better performance
+                const heart = document.createElement('div');
+                heart.className = 'floating-heart';
+                heart.textContent = '❤';
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.animationDuration = Math.random() * 2 + 4 + 's';
+                body.appendChild(heart);
+
+                setTimeout(() => {
+                    heart.remove();
+                }, 5000);
+            }
+        }
+
+        window.onload = () => {
+            setInterval(createFloatingHearts, 1000);
+        };
+    </script>
+</head>
+<body>
+    <div class="poster">
+        <div class="heart">❤</div>
+        <h1>LOVE❤️❤️</h1>
+        <button><a href="https://123ni-afk.github.io/linke-love-phorn.github.io/">Please click here</a></button>
+              </div>
+</body>
+</html>
